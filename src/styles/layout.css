@@ -1,0 +1,26 @@
+.layout {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 25%;
+    background-color: #1e1e1e;
+    color: #ffa500;
+    padding: 1.5rem;
+  }
+  
+  .content {
+    width: 75%;
+    background-color: #121212;
+    color: #fff;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  
+  @media (orientation: portrait) {
+    .layout {
+      height: auto !important;
+    }
+  }
+  

@@ -1,0 +1,17 @@
+services:
+  frontend:
+    build:
+      context: .
+      args:
+        VITE_APP_MODE: production
+    container_name: mon-cv
+    env_file:
+      - .env
+    networks:
+      - proxy
+    ports:
+      - "82:80"
+
+networks:
+  proxy:
+    external: true

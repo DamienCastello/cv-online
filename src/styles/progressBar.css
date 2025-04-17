@@ -1,0 +1,30 @@
+.progress-bar {
+    margin-bottom: 1rem;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+  
+  .bar-container {
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .bar-fill {
+    background-color: #ffa500;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    color: #000;
+    text-align: right;
+    padding-right: 0.5rem;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  .bar-text {
+    font-weight: bold;
+  }
+  

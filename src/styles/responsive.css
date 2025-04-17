@@ -1,0 +1,398 @@
+@media (max-width: 768px) {
+  .layout {
+      flex-direction: column;
+  }
+
+  .sidebar {
+      width: 100%;
+      padding: 1rem 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: fixed;
+      top: 0;
+      max-height: 230px;
+      z-index: 2;
+  }
+
+  .sidebar nav {
+      order: 1;
+      flex: 1;
+      max-width: 150px;
+      border-bottom: none;
+  }
+
+  .contact {
+      position: absolute;
+      top: 1.6rem;
+      right: 1rem;
+      text-align: right;
+      font-size: 0.70rem;
+      max-width: 50%;
+      gap: 10px;
+  }
+
+  .sidebar h2 {
+      width: 100%;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      padding-bottom: 1rem;
+  }
+
+  .content {
+      width: 100%;
+      padding: 1.5rem 1rem;
+      margin-top: 230px;
+      z-index: 1;
+  }
+
+  .sidebar nav a {
+      margin-bottom: 0.5rem;
+      font-size: 0.90rem;
+  }
+
+
+  .icon-nav {
+      margin-right: 10px;
+  }
+
+  /* Expériences */
+  .experiences {
+      padding: 2rem 1rem;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+  }
+
+  .projets {
+      grid-template-columns: 1fr;
+  }
+
+  .projet {
+      padding: 1rem;
+  }
+
+  .projet h3 {
+      font-size: 1.1rem;
+  }
+
+  .projet-date {
+      font-size: 0.85rem;
+  }
+
+  .projet-link {
+      font-size: 0.95rem;
+  }
+
+  .bar-container {
+      border: 1px solid gray
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1160px) {
+  .contact p {
+      min-width: 170px;
+      font-size: 0.70rem;
+      gap: 10px;
+  }
+}
+
+@media (max-width: 430px) {
+  .projet {
+      margin-left: 5%;
+      max-width: 310px;
+  }
+
+  .projets h2 {
+      height: 70px !important;
+      min-width: 0px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .projet {
+      margin-left: 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-container h1 {
+      font-size: clamp(12px, 3vw, 30px);
+      text-align: left;
+    }
+
+  .overlay-content {
+      width: 35%;
+  }
+
+  .image-content {
+      width: 63%;
+  }
+
+  .wrap .text h2{
+    font-size: 14px !important;
+  }
+
+  .wrap .text p{
+    font-size: 10px !important;
+  }
+
+.wrap:hover .text h2{
+  font-size: 14px !important;
+}
+
+.wrap:hover .text p{
+  font-size: 10px !important;
+}
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .portfolio-container h1 {
+      font-size: 15px;
+      text-align: left;
+    }
+
+    .wrap .text h2{
+      font-size: 14px !important;
+    }
+  
+    .wrap .text p{
+      font-size: 10px !important;
+    }
+
+  .wrap:hover .text h2{
+    font-size: 14px !important;
+  }
+
+  .wrap:hover .text p{
+    font-size: 10px !important;
+  }
+}
+    
+
+@media (min-width: 768px) and (max-width: 1160px) {
+  .wrap {
+    width: 90%;
+  max-width: 800px;
+  }
+
+  .portfolio-container h1 {
+    font-size: clamp(12px, 2.5vw, 30px) !important;
+    text-align: left;
+  }
+
+  .overlay-content {
+    width: 35%;
+  }
+
+  .image-content {
+    width: 63%;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 960px){
+  .wrap:hover .overlay {
+    left: clamp(5vw, calc(15vw - ((100vw - 768px) * 10 / 506)), 15vw);
+  }
+
+  .wrap:hover .text {
+    width: clamp(40vw, calc(47vw - ((100vw - 768px) * 7 / 506)), 47vw);
+    padding-left: 80px;
+  }
+
+  .wrap:hover .text h2{
+    font-size: clamp(12px, 2.5vw, 30px) !important;
+  }
+
+  .wrap:hover .text p{
+    font-size: clamp(12px, 1.5vw, 30px) !important;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1060px) {
+  .wrap:hover .overlay {
+    left: clamp(5vw, calc(15vw - ((100vw - 768px) * 10 / 506)), 15vw);
+  }
+
+  .wrap:hover .text {
+    width: clamp(40vw, calc(47vw - ((100vw - 1060px) * 7 / 506)), 47vw);
+    padding-left: 100px;
+  }
+
+  .wrap:hover .text h2{
+    font-size: clamp(12px, 2.5vw, 30px) !important;
+  }
+
+  .wrap:hover .text p{
+    font-size: clamp(12px, 1.5vw, 30px) !important;
+  }
+}
+
+@media (min-width: 1060px) and (max-width: 1160px) {
+  .wrap:hover .overlay {
+    left: clamp(5vw, calc(15vw - ((100vw - 768px) * 10 / 506)), 15vw);
+  }
+
+  .wrap:hover .text {
+    width: clamp(40vw, calc(47vw - ((100vw - 768px) * 7 / 506)), 47vw);
+    padding-left: 160px;
+  }
+
+  .wrap:hover .text h2{
+    font-size: clamp(12px, 2.5vw, 30px) !important;
+  }
+
+  .wrap:hover .text p{
+    font-size: clamp(12px, 1.5vw, 30px) !important;
+  }
+}
+
+
+@media (min-width: 1060px) and (max-width: 1160px) and (orientation: landscape) {
+
+  .wrap:hover .overlay {
+    position: relative !important;
+    top: 0 !important;
+    right: 0px !important;
+    width: 60vh !important;
+  }
+  
+  .wrap .text h2{
+    font-size: clamp(12px, 2.5vw, 30px) !important;
+  }
+
+  .wrap .text p{
+    font-size: clamp(12px, 1.5vw, 30px) !important;
+  }
+
+
+
+  .wrap:hover .text h2{
+    position: relative;
+    bottom: 20px;
+    right: 70px;
+    width: 400px;
+    font-size: clamp(12px, 2.5vw, 30px) !important;
+  }
+
+  .wrap:hover .text p{
+    position: relative;
+    right: 70px;
+    width: 400px;
+    font-size: clamp(12px, 1.5vw, 30px) !important;
+
+  }
+}
+@media (min-width: 768px) and (max-width: 1060px) and (orientation: landscape) {
+
+  .wrap:hover .overlay {
+    position: relative !important;
+    top: 0 !important;
+    right: 0px !important;
+    width: 50vh !important;
+  }
+  
+  
+  .wrap .text h2{
+    font-size: clamp(12px, 2.5vw, 30px) !important;
+  }
+
+  .wrap .text p{
+    font-size: clamp(12px, 1.5vw, 30px) !important;
+  }
+
+
+  .wrap:hover .text h2{
+    position: relative;
+    bottom: 20px;
+    right: 0px;
+    width: 250px;
+    font-size: clamp(12px, 2.5vw, 30px) !important;
+  }
+
+  .wrap:hover .text p{
+    position: relative;
+    right: 0px;
+    width: 250px;
+    font-size: clamp(12px, 1.5vw, 30px) !important;
+  }
+}
+
+@media (min-width: 1500px) and (max-width: 1800px) and (orientation: landscape) {
+    
+  .wrap .text h2{
+    font-size: clamp(12px, 2.5vw, 30px) !important;
+  }
+
+  .wrap .text p{
+    font-size: clamp(12px, 1.5vw, 30px) !important;
+  }
+
+
+  .wrap:hover .text h2{
+    font-size: clamp(12px, 2.5vw, 30px) !important;
+  }
+
+  .wrap:hover .text p{
+    font-size: clamp(12px, 1.5vw, 30px) !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact {
+    position: fixed;
+    left: 2%;
+    top: 55%;
+    line-height: 0;
+    gap: clamp(12px, 2.5vh, 30px) !important;
+  }
+
+  .sidebar h2 {
+    position: fixed;
+    left: 2%;
+    top: 5%;
+    font-size: clamp(12px, 2.5vw, 30px) !important;
+  }
+
+  .sidebar nav {
+    position: fixed;
+    left: 2%;
+    top: 22%;
+  }
+
+  .sidebar nav a {
+    margin-bottom: clamp(12px, 2.5vh, 30px) !important;
+  }
+  
+}
+
+@media (orientation: landscape) {
+  .layout {
+    height: 100%;
+  }
+
+  .sidebar {
+    justify-content: start;
+  }
+
+  .contact {
+    margin-top: 2rem;
+  }
+
+  .sidebar h2 {
+    padding-bottom: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .sidebar nav {
+    padding-bottom: 0;
+    gap: 0;
+  }
+
+  .sidebar nav a {
+    margin-bottom: 2rem;
+  }
+}

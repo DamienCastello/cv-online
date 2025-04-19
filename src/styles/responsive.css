@@ -118,8 +118,12 @@
 }
 
 @media (max-width: 768px) {
+  .portfolio-container {
+    padding: 0.5rem;
+  }
+
   .portfolio-container h1 {
-      font-size: clamp(12px, 3vw, 30px);
+      font-size: clamp(12px, 2vw, 30px);
       text-align: left;
     }
 
@@ -150,7 +154,7 @@
 
 @media (max-width: 768px) and (orientation: landscape) {
   .portfolio-container h1 {
-      font-size: 15px;
+      font-size: clamp(12px, 2.5vw, 30px);
       text-align: left;
     }
 
@@ -177,6 +181,12 @@
     width: 90%;
   max-width: 800px;
   }
+
+  .sidebar-hidden .wrap {
+    width: 60%;
+  max-width: 800px;
+  }
+
 
   .portfolio-container h1 {
     font-size: clamp(12px, 2.5vw, 30px) !important;
@@ -367,6 +377,153 @@
     margin-bottom: clamp(12px, 2.5vh, 30px) !important;
   }
   
+}
+
+@media (min-width: 768px) and (max-width: 1450px) {
+  .burger-menu-side {
+    position: fixed;
+    top: 7%;
+    left: 23%;
+    font-size: 2rem;
+    border: 2px solid #ffd580;
+    padding: 4px;
+    border-radius: 10px;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  
+  .burger-menu-side:hover {
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.3);
+  }
+
+  .burger-menu {
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    font-size: 2rem;
+    border: 2px solid #ffd580;
+    padding: 4px;
+    border-radius: 10px;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  
+  .burger-menu:hover {
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.3);
+  }
+}
+
+@media (min-width: 1450px) {
+  .burger-menu-side {
+    position: fixed;
+    top: 7%;
+    left: 20%;
+    font-size: 2rem;
+    border: 2px solid #ffd580;
+    padding: 4px;
+    border-radius: 10px;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  
+  .burger-menu-side:hover {
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.3);
+  }
+
+  .burger-menu {
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    font-size: 2rem;
+    border: 2px solid #ffd580;
+    padding: 4px;
+    border-radius: 10px;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  
+  .burger-menu:hover {
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.3);
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+.contact {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    text-align: right;
+    font-size: 0.70rem;
+    max-width: 50%;
+    gap: 10px;
+}
+
+.burger-menu-side {
+  position: absolute;
+  top: 45%;
+  right: 10%;
+  font-size: 2rem;
+  border: 2px solid #ffd580;
+  padding: 4px;
+  border-radius: 10px;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.burger-menu-side:hover {
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.3);
+}
+
+.sidebar h2 {
+    width: 100%;
+    max-width: 220px;
+    margin-bottom: 1rem !important;
+    font-size: 1.5rem;
+}
+
+.sidebar nav a {
+    margin-bottom: 1rem !important;
+    font-size: 0.90rem;
+}
+  
+.layout.sidebar-hidden .content {
+  margin-top: 0 !important;
+}
+
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .burger-menu-side {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 2rem;
+    border: 2px solid #ffd580;
+    padding: 4px;
+    border-radius: 10px;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  
+  .burger-menu-side:hover {
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.3);
+  }
+
+  .layout.sidebar-hidden .content {
+    margin-top: 0 !important;
+  }
 }
 
 @media (orientation: landscape) {

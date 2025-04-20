@@ -7,7 +7,7 @@
   .portfolio-container h1 {
     text-align: center;
     margin-bottom: 3rem;
-    font-size: clamp(12px, 2.5vw, 30px);
+    font-size: 1.8rem;
     color: #ffa500;
   }
   
@@ -57,7 +57,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 22vmin;
+    width: 30vmin;
     border-right: 3px solid #ffa500;
     padding-left: 0;
     padding-right: 1rem;
@@ -68,7 +68,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 60vmin;
+    width: 50vmin;
     height: 100%;
     background-size: cover;
     background-position: center;
@@ -81,7 +81,7 @@
     right: 0;
     width: 60vmin;
     height: 100%;
-    padding: 2rem;
+    padding: 2rem 1rem 0 1rem;
     background: linear-gradient(to bottom, #fff, #eee);    
     color: #222;
     overflow-y: scroll;
@@ -184,6 +184,28 @@
   padding-bottom: 15px;
 }
 
-.portfolio-title {
-  font-size: 1.5rem !important;
+.badge-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  color:#222;
+  padding: 2px;
+  border-radius: 15px;
+  border: 2px solid #464646;
+  background-color: #6b6b6b ;
+  background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
+  margin: 0.2em;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.techno-icon {
+  position: relative;;
+  bottom: 10px;
+  left: 3px;
+  font-size: 20px;
 }

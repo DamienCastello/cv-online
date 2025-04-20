@@ -149,3 +149,47 @@
         gap: 1rem;
     }
 }
+
+.cv-download-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.cv-download-button {
+    font-family: 'JetBrains Mono', monospace;
+    background: linear-gradient(145deg, #facc15, #d97706);
+    color: #1e1e1e;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.cv-download-button:hover {
+    background: linear-gradient(145deg, #fde68a, #f59e0b);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.cv-icon {
+    font-size: 1.5rem;
+    animation: bounce 1.2s infinite;
+}
+
+/* Petit rebond de l’icône */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}

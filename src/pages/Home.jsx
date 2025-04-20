@@ -27,6 +27,11 @@ const Home = () => {
                     <span className="home-icon">🎨</span>
                     Je travaille le pixel comme on travaille le bois : avec précision, patience et un brin d’improvisation.
                 </p>
+                <div className="cv-download-container">
+                    <a href="/developpeur_JS_2025.pdf" download className="cv-download-button">
+                        <span className="cv-icon">⬇️</span> Mon CV en PDF
+                    </a>
+                </div>
             </div>
         </div>
     );

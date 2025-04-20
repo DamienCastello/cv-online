@@ -7,6 +7,13 @@
   line-height: 1.6;
 }
 
+.project-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
 h2 {
   color: #ffa500;
   font-size: 1.8rem;
@@ -116,4 +123,15 @@ li {
 
 .bar-container {
   border: 1px solid gray
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.techno-icon {
+  font-size: 20px;
+  margin-right: 3px;
+  margin-top: 15px;
 }

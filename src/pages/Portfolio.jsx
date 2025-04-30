@@ -1,7 +1,7 @@
 import '../styles/portfolio.css';
 import Player from '../components/Player';
 import { useEffect } from 'react';
-import { FaHtml5, FaCss3Alt, FaBootstrap, FaReact, FaNodeJs, FaDocker, FaSass, FaLaravel, FaVuejs } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaBootstrap, FaReact, FaNodeJs, FaDocker, FaSass, FaLaravel, FaVuejs, FaArrowAltCircleRight } from "react-icons/fa";
 import { SiSequelize } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { RiAngularjsFill } from "react-icons/ri";
@@ -20,7 +20,7 @@ const projects = [
     city: 'Arles',
     date: 'Novembre 2024 - Aujourd\hui',
     title: 'Plateforme de diffusion en cours de développement (projet personnel)',
-    description: `Développement de l'interface, des fonctionnalités Front-end et backend. Dockerisation du projet et mise en place d'une CI/CD.`,
+    description: `Conception et développement d’une application web de diffusion de contenus, incluant upload de médias, gestion des utilisateurs et modération. Stack Vue 3 / Node.js (Sequelize), architecture conteneurisée avec Docker et environnements séparés (développement, préproduction, production). Une future intégration du livestream est prévue, basée sur MediaMTX (RTMP/HLS).`,
     technologies: ['html', 'css', 'vue3', 'nodejs', 'sequelize', 'docker']
   },
   {
@@ -271,6 +271,7 @@ export default function Portfolio() {
           <div className="text">
             <h2 className="animate slide-left pop delay-4">{project.title}</h2>
             <p>{project.description}</p>
+            {project.id === 1 ? <div className='agorium-link-container'><FaArrowAltCircleRight /><a className='agorium-link' href="https://agorium.castello.ovh" target='_blank'>Visiter la plateforme</a></div> : null}
             {project.id === 9 ? <Player /> : null}
             <div className="badge-container">
               {project.technologies.map((tech, index) => (

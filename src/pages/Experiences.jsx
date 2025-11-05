@@ -2,7 +2,7 @@ import '../styles/experiences.css'
 
 import ProgressBar from '../components/ProgressBar';
 import { Link } from 'react-router-dom';
-import { FaHtml5, FaCss3Alt, FaBootstrap, FaReact, FaNodeJs, FaDocker, FaSass, FaLaravel, FaVuejs } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaBootstrap, FaReact, FaNodeJs, FaDocker, FaSass, FaLaravel, FaVuejs, FaJava, FaAngular } from "react-icons/fa";
 import { SiSequelize } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { RiAngularjsFill } from "react-icons/ri";
@@ -40,15 +40,24 @@ const formations = [
 const projets = [
     {
         id: 1,
-        link: 'agorium',
-        name: 'Agorium',
+        link: 'rdr',
+        name: 'Red Dawn Raid',
         company: 'Projet personnel',
-        date: 'Novembre 2024 - Aujourd\hui',
-        title: 'plateforme de diffusion en cours de développement.',
-        technologies: ['html', 'css', 'vue3', 'nodejs', 'sequelize', 'docker']
+        date: 'Juin 2025 - Aujourd\hui',
+        title: 'Application web d\'un jeu de société en cours de développement.',
+        technologies: ['html', 'css', 'angular', 'java', 'docker']
     },
     {
         id: 2,
+        link: 'agorium',
+        name: 'Agorium',
+        company: 'Projet personnel',
+        date: 'Octobre 2024 - Mai 2025',
+        title: 'plateforme de diffusion.',
+        technologies: ['html', 'css', 'vue3', 'nodejs', 'sequelize', 'docker']
+    },
+    {
+        id: 3,
         link: 'gdp',
         name: 'Glanum GDP',
         company: 'Agence Glanum',
@@ -57,7 +66,7 @@ const projets = [
         technologies: ['html', 'css', 'react', 'remix', 'tailwind', 'graphql', 'nodejs']
     },
     {
-        id: 3,
+        id: 4,
         link: 'soundstore',
         name: 'Soundstore',
         company: 'Agence Glanum',
@@ -66,7 +75,7 @@ const projets = [
         technologies: ['html', 'css', 'laravel']
     },
     {
-        id: 4,
+        id: 5,
         link: 'stepper',
         name: 'Stepper Peter',
         company: 'Agence Glanum',
@@ -75,7 +84,7 @@ const projets = [
         technologies: ['html', 'css', 'react']
     },
     {
-        id: 5,
+        id: 6,
         link: 'meeye',
         name: 'Me&Eye',
         company: 'Agence Glanum',
@@ -84,7 +93,7 @@ const projets = [
         technologies: ['html', 'css', 'reactNative']
     },
     {
-        id: 6,
+        id: 7,
         link: 'fidwell',
         name: 'Fid’well',
         company: 'Agence Glanum',
@@ -93,7 +102,7 @@ const projets = [
         technologies: ['html', 'css', 'sass', 'reactNative', 'graphql', 'scss']
     },
     {
-        id: 7,
+        id: 8,
         link: 'lina',
         name: 'PLUValue® LINA®',
         company: 'LKSpatialist',
@@ -102,7 +111,7 @@ const projets = [
         technologies: ['html', 'css', 'angularjs', 'docker']
     },
     {
-        id: 8,
+        id: 9,
         link: 'wekolo',
         name: 'Wekolo',
         company: 'Société Proximus',
@@ -111,7 +120,7 @@ const projets = [
         technologies: ['html', 'css', 'reactNative', 'typescript', 'graphql']
     },
     {
-        id: 9,
+        id: 10,
         link: 'coiffinthestreet',
         name: 'Coiff In The Street',
         company: 'Wild code school',
@@ -120,7 +129,7 @@ const projets = [
         technologies: ['html', 'css', 'bootstrap', 'reactNative', 'nodejs', 'sequelize']
     },
     {
-        id: 10,
+        id: 11,
         link: 'dataweek',
         name: 'Deuxième place du Hackathon Dataweek',
         company: 'Wild code school',
@@ -129,7 +138,7 @@ const projets = [
         technologies: ['html', 'css', 'bootstrap', 'react', 'nodejs', 'sequelize']
     },
     {
-        id: 11,
+        id: 12,
         link: 'easteregg',
         name: 'Première place du Hackathon Easter Egg',
         company: 'Wild code school',
@@ -144,7 +153,10 @@ const skills = [
     { name: 'React Native', level: 90 },
     { name: 'Node.js', level: 85 },
     { name: 'Docker', level: 75 },
+    { name: 'Java', level: 70 },
+    { name: 'Angular', level: 65 },
     { name: 'Vue 3', level: 65 },
+    { name: 'Postgre', level: 50 },
     { name: 'GraphQL', level: 50 },
     { name: 'Laravel', level: 20 },
 ];
@@ -157,6 +169,7 @@ const Experiences = () => {
         react: <FaReact style={{ color: '#00a2ff' }} className="techno-icon" />,
         reactNative: <TbBrandReactNative style={{ color: '#0099ff' }} className="techno-icon" />,
         nodejs: <FaNodeJs style={{ color: '#33ff00cb' }} className="techno-icon" />,
+        java: <FaJava style={{ color: '#ffc400cb' }} className="techno-icon" />,
         sequelize: <SiSequelize style={{ color: '#006eff' }} className="techno-icon" />,
         angularjs: <RiAngularjsFill style={{ color: '#ff2600e0' }} className="techno-icon" />,
         typescript: <SiTypescript style={{ color: '#00a2ffe0' }} className="techno-icon" />,
@@ -166,7 +179,8 @@ const Experiences = () => {
         tailwind: <RiTailwindCssFill style={{ color: '#00b7ffd5' }} className="techno-icon" />,
         laravel: <FaLaravel style={{ color: '#ff0015' }} className="techno-icon" />,
         remixjs: <RiRemixRunFill style={{ color: '#00ffff' }} className="techno-icon" />,
-        vue3: <FaVuejs style={{ color: '#00ff0d' }} className="techno-icon" />
+        vue3: <FaVuejs style={{ color: '#00ff0d' }} className="techno-icon" />,
+        angular: <FaAngular style={{ color: '#ff2600e0' }} className="techno-icon" />
     };
 
     const getIcon = (techno) => technoIcons[techno] || null;

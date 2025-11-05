@@ -1,7 +1,7 @@
 import '../styles/portfolio.css';
 import Player from '../components/Player';
 import { useEffect } from 'react';
-import { FaHtml5, FaCss3Alt, FaBootstrap, FaReact, FaNodeJs, FaDocker, FaSass, FaLaravel, FaVuejs, FaArrowAltCircleRight } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaBootstrap, FaReact, FaNodeJs, FaDocker, FaSass, FaLaravel, FaVuejs, FaArrowAltCircleRight, FaJava, FaAngular } from "react-icons/fa";
 import { SiSequelize } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { RiAngularjsFill } from "react-icons/ri";
@@ -11,20 +11,32 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { RiRemixRunFill } from "react-icons/ri";
 
 const projects = [
-  {
+    {
     id: 1,
+    link: 'rdr',
+    image: 'images/rdr.gif',
+    name: 'Red Dawn Raid',
+    company: '404 Not found ?',
+    city: 'Arles',
+    date: 'Juin 2025 - Aujourd\hui',
+    title: 'Application web d\'un jeu de société (projet personnel)',
+    description: `Création des règles et du design des cartes. Conception et développement d’une application web du jeu, de 2 à 7 joueurs avec un système de web socket pour gérer les actions utilisateurs, les effets par joueurs, les phases et les tours de jeu. Stack Angular / Java, architecture conteneurisée avec Docker et environnements séparés (développement, préproduction, production). Version jouable en cours de développement et bientôt ouverte au publique.`,
+    technologies: ['html', 'css', 'angular', 'java', 'docker']
+  },
+  {
+    id: 2,
     link: 'agorium',
     image: 'images/agorium.gif',
     name: 'Agorium',
     company: '404 Not found ?',
     city: 'Arles',
-    date: 'Novembre 2024 - Aujourd\hui',
-    title: 'Plateforme de diffusion en cours de développement (projet personnel)',
-    description: `Conception et développement d’une application web de diffusion de contenus, incluant upload de médias, gestion des utilisateurs et modération. Stack Vue 3 / Node.js (Sequelize), architecture conteneurisée avec Docker et environnements séparés (développement, préproduction, production). Une future intégration du livestream est prévue, basée sur MediaMTX (RTMP/HLS).`,
+    date: 'Octobre 2024 - Mai 2025',
+    title: 'Plateforme de diffusion (projet personnel)',
+    description: `Conception et développement d’une application web de diffusion de contenus, incluant upload de médias, gestion des utilisateurs, modération et système de queue & workers pour le transcodage des vidéos en mp4 & HLS lors du traitement backend afin de garantir les performances de diffusion. Stack Vue 3 / Node.js (Sequelize), architecture conteneurisée avec Docker et environnements séparés (développement, préproduction, production).`,
     technologies: ['html', 'css', 'vue3', 'nodejs', 'sequelize', 'docker']
   },
   {
-    id: 2,
+    id: 3,
     link: 'gdp',
     image: 'images/GDP.png',
     name: 'Glanum GDP',
@@ -36,7 +48,7 @@ const projects = [
     technologies: ['html', 'css', 'react', 'remix', 'tailwind', 'graphql', 'nodejs']
   },
   {
-    id: 3,
+    id: 4,
     link: 'soundstore',
     image: 'images/soundstore.gif',
     name: 'Soundstore',
@@ -48,7 +60,7 @@ const projects = [
     technologies: ['html', 'css', 'laravel']
   },
   {
-    id: 4,
+    id: 5,
     link: 'stepper',
     image: 'images/stepper.gif',
     name: 'Stepper Peter',
@@ -60,7 +72,7 @@ const projects = [
     technologies: ['html', 'css', 'react']
   },
   {
-    id: 5,
+    id: 6,
     link: 'meeye',
     image: 'images/meeye.gif',
     name: 'Me&Eye',
@@ -72,7 +84,7 @@ const projects = [
     technologies: ['html', 'css', 'reactNative']
   },
   {
-    id: 6,
+    id: 7,
     link: 'fidwell',
     image: 'images/fidwell.gif',
     name: 'Fid’well',
@@ -84,7 +96,7 @@ const projects = [
     technologies: ['html', 'css', 'sass', 'reactNative', 'graphql', 'scss']
   },
   {
-    id: 7,
+    id: 8,
     link: 'lina',
     image: 'images/lina.gif',
     name: 'PLUValue® LINA®',
@@ -96,7 +108,7 @@ const projects = [
     technologies: ['html', 'css', 'angularjs', 'docker']
   },
   {
-    id: 8,
+    id: 9,
     link: 'wekolo',
     image: 'images/wekolo.png',
     name: 'Wekolo',
@@ -108,7 +120,7 @@ const projects = [
     technologies: ['html', 'css', 'reactNative', 'typescript', 'graphql']
   },
   {
-    id: 9,
+    id: 10,
     link: 'coiffinthestreet',
     image: 'images/coiffInTheStreet.png',
     name: 'Coiff In The Street',
@@ -120,7 +132,7 @@ const projects = [
     technologies: ['html', 'css', 'bootstrap', 'reactNative', 'nodejs', 'sequelize']
   },
   {
-    id: 10,
+    id: 11,
     link: 'dataweek',
     image: 'images/dataweek.jpeg',
     name: 'Deuxième place du Hackathon Dataweek',
@@ -132,7 +144,7 @@ const projects = [
     technologies: ['html', 'css', 'bootstrap', 'react', 'nodejs', 'sequelize']
   },
   {
-    id: 11,
+    id: 12,
     link: 'easteregg',
     image: 'images/easter_egg.gif',
     name: 'Première place du Hackathon Easter Egg',
@@ -187,6 +199,14 @@ export default function Portfolio() {
       
         <span className={'badge'}>react native <TbBrandReactNative style={{ color: '#0099ff' }} className="techno-icon" /></span>
       ,
+    angular:
+
+        <span className={'badge'}>angular <FaJava style={{ color: '#ff2600e0' }} className="techno-icon" /></span>
+      ,
+    java:
+
+        <span className={'badge'}>java <FaJava style={{ color: '#ffc400cb' }} className="techno-icon" /></span>
+      ,
     nodejs:
       
         <span className={'badge'}>node js <FaNodeJs style={{ color: '#33ff00cb' }} className="techno-icon" /></span>
@@ -232,9 +252,6 @@ export default function Portfolio() {
         <span className={'badge'}>vue 3 <FaVuejs style={{ color: '#00ff0d' }} className="techno-icon" /></span>
   };
 
-  const getIcon = (techno) => technoIcons[techno] || null;
-
-
   const scrollToAnchorWithOffset = (id, offset = 100, attempts = 5) => {
     const element = document.getElementById(id);
     if (element) {
@@ -271,8 +288,8 @@ export default function Portfolio() {
           <div className="text">
             <h2 className="animate slide-left pop delay-4">{project.title}</h2>
             <p>{project.description}</p>
-            {project.id === 1 ? <div className='agorium-link-container'><FaArrowAltCircleRight /><a className='agorium-link' href="https://agorium.castello.ovh" target='_blank'>Visiter la plateforme</a></div> : null}
-            {project.id === 9 ? <Player /> : null}
+            {project.id === 2 ? <div className='agorium-link-container'><FaArrowAltCircleRight /><a className='agorium-link' href="https://agorium.castello.ovh" target='_blank'>Visiter la plateforme</a></div> : null}
+            {project.id === 10 ? <Player /> : null}
             <div className="badge-container">
               {project.technologies.map((tech, index) => (
                 <span key={index}>{technoIcons[tech]}</span>

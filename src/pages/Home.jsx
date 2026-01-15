@@ -28,7 +28,7 @@ const Home = () => {
                     Je travaille le pixel comme on travaille le bois : avec précision, patience et un brin d’improvisation.
                 </p>
                 <div className="cv-download-container">
-                    <a href="/Developpeur_web_2025.pdf" download className="cv-download-button">
+                    <a href="/Developpeur_web_2026.pdf" download className="cv-download-button">
                         <span className="cv-icon">⬇️</span> Mon CV en PDF
                     </a>
                 </div>

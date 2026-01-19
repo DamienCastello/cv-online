@@ -106,7 +106,7 @@
   }
 
   .projets h2 {
-      height: 70px !important;
+      margin-bottom: 0;
       min-width: 0px !important;
   }
 }

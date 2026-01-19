@@ -1,5 +1,7 @@
 import '../styles/experiences.css'
 
+import React from 'react';
+
 import ProgressBar from '../components/ProgressBar';
 import { Link } from 'react-router-dom';
 import { FaHtml5, FaCss3Alt, FaBootstrap, FaReact, FaNodeJs, FaDocker, FaSass, FaLaravel, FaVuejs, FaJava, FaAngular } from "react-icons/fa";
@@ -148,6 +150,37 @@ const projets = [
     },
 ];
 
+const skillGroups = [
+  {
+    title: "Stack principale",
+    items: [
+      { label: "React", icon: "react" },
+      { label: "TypeScript", icon: "typescript" },
+      { label: "Node.js", icon: "nodejs" },
+      { label: "Sequelize", icon: "sequelize" },
+      { label: "SQL", icon: null },
+    ],
+  },
+  {
+    title: "Bonus",
+    items: [
+      { label: "React Native", icon: "reactNative" },
+      { label: "GraphQL", icon: "graphql" },
+      { label: "Remix", icon: "remixjs" },
+      { label: "Docker (opérationnel)", icon: "docker" },
+    ],
+  },
+  {
+    title: "En montée (perso)",
+    items: [
+      { label: "Vue 3", icon: "vue3" },
+      { label: "Angular", icon: "angular" },
+      { label: "Java", icon: "java" },
+    ],
+  },
+];
+
+/*
 const skills = [
     { name: 'React', level: 95 },
     { name: 'React Native', level: 90 },
@@ -160,6 +193,7 @@ const skills = [
     { name: 'GraphQL', level: 50 },
     { name: 'Laravel', level: 20 },
 ];
+*/
 
 const Experiences = () => {
     const technoIcons = {
@@ -187,16 +221,33 @@ const Experiences = () => {
 
     return (
         <div className="experiences">
-            <section className="formations">
-                <h2>Formations</h2>
-                <ul>
-                    {formations.map((formation, index) => (
-                        <li key={index}>
-                            <strong>{formation.date}</strong> — {formation.title}
-                            {formation.level && <span> ({formation.level})</span>}
-                        </li>
+            <section className="competences">
+                <h2>Compétences</h2>
+
+                <div className="skills">
+                    {skillGroups.map((group, groupIndex) => (
+                    <div key={group.title} className="skill-group">
+                        <h3 className={groupIndex > 0 ? "skill-title spaced" : "skill-title"}>
+                        {group.title}
+                        </h3>
+
+                        <p className="skills-line">
+                        {group.items.map((item, index) => (
+                            <React.Fragment key={`${group.title}-${item.label}`}>
+                            <span className="skill-item">
+                                {item.icon ? getIcon(item.icon) : null}
+                                {item.label}
+                            </span>
+
+                            {index < group.items.length - 1 && (
+                                <span className="skill-sep">•</span>
+                            )}
+                            </React.Fragment>
+                        ))}
+                        </p>
+                    </div>
                     ))}
-                </ul>
+                </div>
             </section>
 
             <section className="projets">
@@ -223,12 +274,27 @@ const Experiences = () => {
                 ))}
             </section>
 
+            <section className="formations">
+                <h2>Formations</h2>
+                <ul>
+                    {formations.map((formation, index) => (
+                        <li key={index}>
+                            <strong>{formation.date}</strong> — {formation.title}
+                            {formation.level && <span> ({formation.level})</span>}
+                        </li>
+                    ))}
+                </ul>
+            </section>
+
+
+            {/* 
             <section className="competences">
                 <h2>Compétences</h2>
                 {skills.map((skill, index) => (
                     <ProgressBar key={index} name={skill.name} level={skill.level} />
                 ))}
-            </section>
+            </section> 
+            */}
         </div>
     );
 };

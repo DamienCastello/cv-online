@@ -6,7 +6,7 @@ import ProgressBar from '../components/ProgressBar';
 import { Link } from 'react-router-dom';
 import { FaHtml5, FaCss3Alt, FaBootstrap, FaReact, FaNodeJs, FaDocker, FaSass, FaLaravel, FaVuejs, FaJava, FaAngular } from "react-icons/fa";
 import { SiSequelize } from "react-icons/si";
-import { TbBrandReactNative } from "react-icons/tb";
+import { TbBrandReactNative, TbBrandMysql } from "react-icons/tb";
 import { RiAngularjsFill } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
 import { GrGraphQl } from "react-icons/gr";
@@ -45,7 +45,7 @@ const projets = [
         link: 'rdr',
         name: 'Red Dawn Raid',
         company: 'Projet personnel',
-        date: 'Juin 2025 - Aujourd\hui',
+        date: 'Juin 2025 - Avril 2026',
         title: 'Application web d\'un jeu de société en cours de développement.',
         technologies: ['html', 'css', 'angular', 'java', 'docker']
     },
@@ -154,30 +154,25 @@ const skillGroups = [
   {
     title: "Stack principale",
     items: [
+      { label: "Angular", icon: "angular" },
+      { label: "Java", icon: "java" },
       { label: "React", icon: "react" },
       { label: "TypeScript", icon: "typescript" },
       { label: "Node.js", icon: "nodejs" },
       { label: "Sequelize", icon: "sequelize" },
-      { label: "SQL", icon: null },
+      { label: "SQL", icon: "sql" },
     ],
   },
   {
     title: "Bonus",
     items: [
       { label: "React Native", icon: "reactNative" },
+      { label: "Vue 3", icon: "vue3" },
       { label: "GraphQL", icon: "graphql" },
       { label: "Remix", icon: "remixjs" },
       { label: "Docker (opérationnel)", icon: "docker" },
     ],
-  },
-  {
-    title: "En montée (perso)",
-    items: [
-      { label: "Vue 3", icon: "vue3" },
-      { label: "Angular", icon: "angular" },
-      { label: "Java", icon: "java" },
-    ],
-  },
+  }
 ];
 
 /*
@@ -214,7 +209,8 @@ const Experiences = () => {
         laravel: <FaLaravel style={{ color: '#ff0015' }} className="techno-icon" />,
         remixjs: <RiRemixRunFill style={{ color: '#00ffff' }} className="techno-icon" />,
         vue3: <FaVuejs style={{ color: '#00ff0d' }} className="techno-icon" />,
-        angular: <FaAngular style={{ color: '#ff2600e0' }} className="techno-icon" />
+        angular: <FaAngular style={{ color: '#ff2600e0' }} className="techno-icon" />,
+        sql: <TbBrandMysql style={{ color: '#0099ffe0' }} className="techno-icon" />
     };
 
     const getIcon = (techno) => technoIcons[techno] || null;

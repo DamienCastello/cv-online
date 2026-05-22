@@ -18,7 +18,7 @@ const projects = [
     name: 'Red Dawn Raid',
     company: '404 Not found ?',
     city: 'Arles',
-    date: 'Juin 2025 - Aujourd\hui',
+    date: 'Juin 2025 - Avril 2026',
     title: 'Application web d\'un jeu de société (projet personnel)',
     description: `Création des règles et du design des cartes. Conception et développement d’une application web du jeu, de 2 à 7 joueurs avec un système de web socket pour gérer les actions utilisateurs, les effets par joueurs, les phases et les tours de jeu. Stack Angular / Java, architecture conteneurisée avec Docker et environnements séparés (développement, préproduction, production). Version jouable en cours de développement et bientôt ouverte au publique.`,
     technologies: ['html', 'css', 'angular', 'java', 'docker']

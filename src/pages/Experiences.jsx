@@ -40,8 +40,17 @@ const formations = [
 ];
 
 const projets = [
-    {
+        {
         id: 1,
+        link: 'gol',
+        name: 'Game of life',
+        company: 'Projet personnel',
+        date: 'Juillet 2026',
+        title: 'Application web du jeu de la vie de Conway - automate cellulaire',
+        technologies: ['html', 'css', 'angular', 'java', 'docker']
+    },
+    {
+        id: 2,
         link: 'rdr',
         name: 'Red Dawn Raid',
         company: 'Projet personnel',
@@ -50,7 +59,7 @@ const projets = [
         technologies: ['html', 'css', 'angular', 'java', 'docker']
     },
     {
-        id: 2,
+        id: 3,
         link: 'agorium',
         name: 'Agorium',
         company: 'Projet personnel',
@@ -59,7 +68,7 @@ const projets = [
         technologies: ['html', 'css', 'vue3', 'nodejs', 'sequelize', 'docker']
     },
     {
-        id: 3,
+        id: 4,
         link: 'gdp',
         name: 'Glanum GDP',
         company: 'Agence Glanum',
@@ -68,7 +77,7 @@ const projets = [
         technologies: ['html', 'css', 'react', 'remix', 'tailwind', 'graphql', 'nodejs']
     },
     {
-        id: 4,
+        id: 5,
         link: 'soundstore',
         name: 'Soundstore',
         company: 'Agence Glanum',
@@ -77,7 +86,7 @@ const projets = [
         technologies: ['html', 'css', 'laravel']
     },
     {
-        id: 5,
+        id: 6,
         link: 'stepper',
         name: 'Stepper Peter',
         company: 'Agence Glanum',
@@ -86,7 +95,7 @@ const projets = [
         technologies: ['html', 'css', 'react']
     },
     {
-        id: 6,
+        id: 7,
         link: 'meeye',
         name: 'Me&Eye',
         company: 'Agence Glanum',
@@ -95,7 +104,7 @@ const projets = [
         technologies: ['html', 'css', 'reactNative']
     },
     {
-        id: 7,
+        id: 8,
         link: 'fidwell',
         name: 'Fid’well',
         company: 'Agence Glanum',
@@ -104,7 +113,7 @@ const projets = [
         technologies: ['html', 'css', 'sass', 'reactNative', 'graphql', 'scss']
     },
     {
-        id: 8,
+        id: 9,
         link: 'lina',
         name: 'PLUValue® LINA®',
         company: 'LKSpatialist',
@@ -113,7 +122,7 @@ const projets = [
         technologies: ['html', 'css', 'angularjs', 'docker']
     },
     {
-        id: 9,
+        id: 10,
         link: 'wekolo',
         name: 'Wekolo',
         company: 'Société Proximus',
@@ -122,7 +131,7 @@ const projets = [
         technologies: ['html', 'css', 'reactNative', 'typescript', 'graphql']
     },
     {
-        id: 10,
+        id: 11,
         link: 'coiffinthestreet',
         name: 'Coiff In The Street',
         company: 'Wild code school',
@@ -131,7 +140,7 @@ const projets = [
         technologies: ['html', 'css', 'bootstrap', 'reactNative', 'nodejs', 'sequelize']
     },
     {
-        id: 11,
+        id: 12,
         link: 'dataweek',
         name: 'Deuxième place du Hackathon Dataweek',
         company: 'Wild code school',
@@ -140,7 +149,7 @@ const projets = [
         technologies: ['html', 'css', 'bootstrap', 'react', 'nodejs', 'sequelize']
     },
     {
-        id: 12,
+        id: 13,
         link: 'easteregg',
         name: 'Première place du Hackathon Easter Egg',
         company: 'Wild code school',

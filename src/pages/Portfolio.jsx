@@ -11,8 +11,20 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { RiRemixRunFill } from "react-icons/ri";
 
 const projects = [
-    {
+  {
     id: 1,
+    link: 'gol',
+    image: 'images/game-of-life.gif',
+    name: 'Game of life',
+    company: '404 Not found ?',
+    city: 'Arles',
+    date: 'Juillet 2026',
+    title: 'Jeu de la vie de Conway - automate cellulaire',
+    description: `Jeu de la Vie de Conway — Application web full-stack (Angular + Spring Boot), dockerisée et déployée sur VPS OVH. Simulation interactive avec patterns célèbres, mode torique, et interface responsive. [game-of-life.castello.ovh]`,
+    technologies: ['html', 'css', 'angular', 'java', 'docker']
+  },
+    {
+    id: 2,
     link: 'rdr',
     image: 'images/rdr.gif',
     name: 'Red Dawn Raid',
@@ -20,11 +32,11 @@ const projects = [
     city: 'Arles',
     date: 'Juin 2025 - Avril 2026',
     title: 'Application web d\'un jeu de société (projet personnel)',
-    description: `Création des règles et du design des cartes. Conception et développement d’une application web du jeu, de 2 à 7 joueurs avec un système de web socket pour gérer les actions utilisateurs, les effets par joueurs, les phases et les tours de jeu. Stack Angular / Java, architecture conteneurisée avec Docker et environnements séparés (développement, préproduction, production). Version jouable en cours de développement et bientôt ouverte au publique.`,
+    description: `Conception et développement d'une application web du Jeu de la Vie de Conway : simulation interactive permettant de dessiner sa propre configuration ou de lancer des patterns célèbres (canon à planeurs de Gosper, vaisseaux, oscillateurs, méthuselahs), avec grille redimensionnable, mode torique et réglage de la vitesse de simulation. Architecture REST sans état (stateless) où le client transmet la grille à chaque génération, évitant tout conflit entre les simulations des différents utilisateurs. Stack Angular / Java (Spring Boot), architecture conteneurisée avec Docker, déployée sur un VPS OVH derrière nginx et un reverse proxy (HTTPS). Interface responsive (mobile et paysage) et page de présentation pédagogique des règles. En ligne et accessible au public.`,
     technologies: ['html', 'css', 'angular', 'java', 'docker']
   },
   {
-    id: 2,
+    id: 3,
     link: 'agorium',
     image: 'images/agorium.gif',
     name: 'Agorium',
@@ -36,7 +48,7 @@ const projects = [
     technologies: ['html', 'css', 'vue3', 'nodejs', 'sequelize', 'docker']
   },
   {
-    id: 3,
+    id: 4,
     link: 'gdp',
     image: 'images/GDP.png',
     name: 'Glanum GDP',
@@ -48,7 +60,7 @@ const projects = [
     technologies: ['html', 'css', 'react', 'remix', 'tailwind', 'graphql', 'nodejs']
   },
   {
-    id: 4,
+    id: 5,
     link: 'soundstore',
     image: 'images/soundstore.gif',
     name: 'Soundstore',
@@ -60,7 +72,7 @@ const projects = [
     technologies: ['html', 'css', 'laravel']
   },
   {
-    id: 5,
+    id: 6,
     link: 'stepper',
     image: 'images/stepper.gif',
     name: 'Stepper Peter',
@@ -72,7 +84,7 @@ const projects = [
     technologies: ['html', 'css', 'react']
   },
   {
-    id: 6,
+    id: 7,
     link: 'meeye',
     image: 'images/meeye.gif',
     name: 'Me&Eye',
@@ -84,7 +96,7 @@ const projects = [
     technologies: ['html', 'css', 'reactNative']
   },
   {
-    id: 7,
+    id: 8,
     link: 'fidwell',
     image: 'images/fidwell.gif',
     name: 'Fid’well',
@@ -96,7 +108,7 @@ const projects = [
     technologies: ['html', 'css', 'sass', 'reactNative', 'graphql', 'scss']
   },
   {
-    id: 8,
+    id: 9,
     link: 'lina',
     image: 'images/lina.gif',
     name: 'PLUValue® LINA®',
@@ -108,7 +120,7 @@ const projects = [
     technologies: ['html', 'css', 'angularjs', 'docker']
   },
   {
-    id: 9,
+    id: 10,
     link: 'wekolo',
     image: 'images/wekolo.png',
     name: 'Wekolo',
@@ -120,7 +132,7 @@ const projects = [
     technologies: ['html', 'css', 'reactNative', 'typescript', 'graphql']
   },
   {
-    id: 10,
+    id: 11,
     link: 'coiffinthestreet',
     image: 'images/coiffInTheStreet.png',
     name: 'Coiff In The Street',
@@ -132,7 +144,7 @@ const projects = [
     technologies: ['html', 'css', 'bootstrap', 'reactNative', 'nodejs', 'sequelize']
   },
   {
-    id: 11,
+    id: 12,
     link: 'dataweek',
     image: 'images/dataweek.jpeg',
     name: 'Deuxième place du Hackathon Dataweek',
@@ -144,7 +156,7 @@ const projects = [
     technologies: ['html', 'css', 'bootstrap', 'react', 'nodejs', 'sequelize']
   },
   {
-    id: 12,
+    id: 13,
     link: 'easteregg',
     image: 'images/easter_egg.gif',
     name: 'Première place du Hackathon Easter Egg',
@@ -288,8 +300,9 @@ export default function Portfolio() {
           <div className="text">
             <h2 className="animate slide-left pop delay-4">{project.title}</h2>
             <p>{project.description}</p>
-            {project.id === 2 ? <div className='agorium-link-container'><FaArrowAltCircleRight /><a className='agorium-link' href="https://agorium.castello.ovh" target='_blank'>Visiter la plateforme</a></div> : null}
-            {project.id === 10 ? <Player /> : null}
+            {project.id === 1 ? <div className='agorium-link-container'><FaArrowAltCircleRight /><a className='agorium-link' href="https://game-of-life.castello.ovh" target='_blank'>Visiter la site</a></div> : null}
+            {project.id === 3 ? <div className='agorium-link-container'><FaArrowAltCircleRight /><a className='agorium-link' href="https://agorium.castello.ovh" target='_blank'>Visiter la plateforme</a></div> : null}
+            {project.id === 11 ? <Player /> : null}
             <div className="badge-container">
               {project.technologies.map((tech, index) => (
                 <span key={index}>{technoIcons[tech]}</span>

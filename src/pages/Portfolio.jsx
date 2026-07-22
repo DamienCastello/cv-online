@@ -20,7 +20,7 @@ const projects = [
     city: 'Arles',
     date: 'Juillet 2026',
     title: 'Jeu de la vie de Conway - automate cellulaire',
-    description: `Jeu de la Vie de Conway — Application web full-stack (Angular + Spring Boot), dockerisée et déployée sur VPS OVH. Simulation interactive avec patterns célèbres, mode torique, et interface responsive. [game-of-life.castello.ovh]`,
+    description: `Conception et développement d'une application web du Jeu de la Vie de Conway : simulation interactive permettant de dessiner sa propre configuration ou de lancer des patterns célèbres (canon à planeurs de Gosper, vaisseaux, oscillateurs, méthuselahs), avec grille redimensionnable, mode torique et réglage de la vitesse de simulation. Architecture REST sans état (stateless) où le client transmet la grille à chaque génération, évitant tout conflit entre les simulations des différents utilisateurs. Stack Angular / Java (Spring Boot), architecture conteneurisée avec Docker, déployée sur un VPS OVH. Interface responsive (mobile et paysage) et page de présentation pédagogique des règles. En ligne et accessible au public à l'adresse ci-dessous.`,
     technologies: ['html', 'css', 'angular', 'java', 'docker']
   },
     {
@@ -32,7 +32,7 @@ const projects = [
     city: 'Arles',
     date: 'Juin 2025 - Avril 2026',
     title: 'Application web d\'un jeu de société (projet personnel)',
-    description: `Conception et développement d'une application web du Jeu de la Vie de Conway : simulation interactive permettant de dessiner sa propre configuration ou de lancer des patterns célèbres (canon à planeurs de Gosper, vaisseaux, oscillateurs, méthuselahs), avec grille redimensionnable, mode torique et réglage de la vitesse de simulation. Architecture REST sans état (stateless) où le client transmet la grille à chaque génération, évitant tout conflit entre les simulations des différents utilisateurs. Stack Angular / Java (Spring Boot), architecture conteneurisée avec Docker, déployée sur un VPS OVH derrière nginx et un reverse proxy (HTTPS). Interface responsive (mobile et paysage) et page de présentation pédagogique des règles. En ligne et accessible au public.`,
+    description: `Création des règles et du design des cartes. Conception et développement d’une application web du jeu, de 2 à 7 joueurs avec un système de web socket pour gérer les actions utilisateurs, les effets par joueurs, les phases et les tours de jeu. Stack Angular / Java, architecture conteneurisée avec Docker et environnements séparés (développement, préproduction, production). Version jouable en cours de développement et bientôt ouverte au public.`,
     technologies: ['html', 'css', 'angular', 'java', 'docker']
   },
   {
@@ -300,7 +300,7 @@ export default function Portfolio() {
           <div className="text">
             <h2 className="animate slide-left pop delay-4">{project.title}</h2>
             <p>{project.description}</p>
-            {project.id === 1 ? <div className='agorium-link-container'><FaArrowAltCircleRight /><a className='agorium-link' href="https://game-of-life.castello.ovh" target='_blank'>Visiter la site</a></div> : null}
+            {project.id === 1 ? <div className='agorium-link-container'><FaArrowAltCircleRight /><a className='agorium-link' href="https://game-of-life.castello.ovh" target='_blank'>Visiter le site</a></div> : null}
             {project.id === 3 ? <div className='agorium-link-container'><FaArrowAltCircleRight /><a className='agorium-link' href="https://agorium.castello.ovh" target='_blank'>Visiter la plateforme</a></div> : null}
             {project.id === 11 ? <Player /> : null}
             <div className="badge-container">
